@@ -1,0 +1,30 @@
+{
+  "name": "marbellachaincore-lib",
+  "main": "./marbellachaincore-lib.min.js",
+  "version": "0.0.1",
+  "homepage": "http://marbellachain.org",
+  "authors": [
+    "MarbellaChain <foundation@marbellachain.org>"
+  ],
+  "description": "A pure, powerful core for your marbellachain project.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "bitcoin",
+    "bitcore",
+    "btc",
+    "satoshi"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "CONTRIBUTING.md",
+    "gulpfile.js",
+    "lib",
+    "index.js",
+    "karma.conf.js",
+    "npm-shrinkwrap.json",
+    "test"
+  ]
+}
