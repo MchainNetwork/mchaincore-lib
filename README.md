@@ -37,7 +37,7 @@ This will generate files named `marbellachaincore-lib.js` and `marbellachaincore
 ## Development & Tests
 
 ```sh
-git clone https://github.com/marbellachainproject/marbellachaincore-lib
+git clone https://github.com/marbellachain/marbellachaincore-lib
 cd marbellachaincore-lib
 npm install
 ```

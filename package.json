@@ -2,7 +2,7 @@
   "name": "marbellachaincore-lib",
   "version": "0.0.1",
   "description": "A pure and powerful JavaScript MarbellaChain library.",
-  "author": "MarbellaChain <foundation@marbellachain.org>",
+  "author": "MarbellaChain <hello@marbellachain.org>",
   "main": "index.js",
   "scripts": {
     "lint": "gulp lint",
@@ -30,7 +30,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/blockchainmarbella/marbellachaincore-lib.git"
+    "url": "https://github.com/marbellachain/marbellachaincore-lib.git"
   },
   "browser": {
     "request": "browser-request"
