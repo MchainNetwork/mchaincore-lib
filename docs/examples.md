@@ -1,8 +1,8 @@
-# MarbellaChaincore examples
+# Mchaincore examples
 
 ## Generate a random address
 ```javascript
-var privateKey = new marbellachaincore.PrivateKey();
+var privateKey = new mchaincore.PrivateKey();
 
 var address = privateKey.toAddress();
 ```
@@ -10,22 +10,22 @@ var address = privateKey.toAddress();
 ## Generate a address from a SHA256 hash
 ```javascript
 var value = new Buffer('correct horse battery staple');
-var hash = marbellachaincore.crypto.Hash.sha256(value);
-var bn = marbellachaincore.crypto.BN.fromBuffer(hash);
+var hash = mchaincore.crypto.Hash.sha256(value);
+var bn = mchaincore.crypto.BN.fromBuffer(hash);
 
-var address = new marbellachaincore.PrivateKey(bn).toAddress();
+var address = new mchaincore.PrivateKey(bn).toAddress();
 ```
 
 ## Import an address via WIF
 ```javascript
 var wif = 'Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct';
 
-var address = new marbellachaincore.PrivateKey(wif).toAddress();
+var address = new mchaincore.PrivateKey(wif).toAddress();
 ```
 
 ## Create a Transaction
 ```javascript
-var privateKey = new marbellachaincore.PrivateKey('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy');
+var privateKey = new mchaincore.PrivateKey('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy');
 var utxo = {
   "txId" : "115e8f72f39fad874cfab0deed11a80f24f967a84079fb56ddf53ea02e308986",
   "outputIndex" : 0,
@@ -34,25 +34,25 @@ var utxo = {
   "satoshis" : 50000
 };
 
-var transaction = new marbellachaincore.Transaction()
+var transaction = new mchaincore.Transaction()
   .from(utxo)
   .to('1Gokm82v6DmtwKEB8AiVhm82hyFSsEvBDK', 15000)
   .sign(privateKey);
 ```
 
-## Sign a MarbellaChain message
+## Sign a Mchain message
 ```javascript
-var Message = require('marbellachaincore-message');
+var Message = require('mchaincore-message');
 
-var privateKey = new marbellachaincore.PrivateKey('L23PpjkBQqpAF4vbMHNfTZAb3KFPBSawQ7KinFTzz7dxq6TZX8UA');
+var privateKey = new mchaincore.PrivateKey('L23PpjkBQqpAF4vbMHNfTZAb3KFPBSawQ7KinFTzz7dxq6TZX8UA');
 var message = new Message('This is an example of a signed message.');
 
 var signature = message.sign(privateKey);
 ```
 
-## Verify a MarbellaChain message
+## Verify a Mchain message
 ```javascript
-var Message = require('marbellachaincore-message');
+var Message = require('mchaincore-message');
 
 var address = '13Js7D3q4KvfSqgKN8LpNq57gcahrVc5JZ';
 var signature = 'IBOvIfsAs/da1e36W8kw1cQOPqPVXCW5zJgNQ5kI8m57FycZXdeFmeyoIqJSREzE4W7vfDmdmPk0HokuJPvgPPE=';
@@ -62,7 +62,7 @@ var verified = new Message('This is an example of a signed message.').verify(add
 
 ## Create an OP RETURN transaction
 ```javascript
-var privateKey = new marbellachaincore.PrivateKey('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy');
+var privateKey = new mchaincore.PrivateKey('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy');
 var utxo = {
   "txId" : "115e8f72f39fad874cfab0deed11a80f24f967a84079fb56ddf53ea02e308986",
   "outputIndex" : 0,
@@ -71,9 +71,9 @@ var utxo = {
   "satoshis" : 50000
 };
 
-var transaction = new marbellachaincore.Transaction()
+var transaction = new mchaincore.Transaction()
     .from(utxo)
-    .addData('marbellachaincore rocks') // Add OP_RETURN data
+    .addData('mchaincore rocks') // Add OP_RETURN data
     .sign(privateKey);
 ```
 
@@ -86,27 +86,27 @@ var publicKeys = [
 ];
 var requiredSignatures = 2;
 
-var address = new marbellachaincore.Address(publicKeys, requiredSignatures);
+var address = new mchaincore.Address(publicKeys, requiredSignatures);
 ```
 
 ## Spend from a 2-of-2 multisig P2SH address
 ```javascript
 var privateKeys = [
-  new marbellachaincore.PrivateKey('91avARGdfge8E4tZfYLoxeJ5sGBdNJQH4kvjJoQFacbgwmaKkrx'),
-  new marbellachaincore.PrivateKey('91avARGdfge8E4tZfYLoxeJ5sGBdNJQH4kvjJoQFacbgww7vXtT')
+  new mchaincore.PrivateKey('91avARGdfge8E4tZfYLoxeJ5sGBdNJQH4kvjJoQFacbgwmaKkrx'),
+  new mchaincore.PrivateKey('91avARGdfge8E4tZfYLoxeJ5sGBdNJQH4kvjJoQFacbgww7vXtT')
 ];
-var publicKeys = privateKeys.map(marbellachaincore.PublicKey);
-var address = new marbellachaincore.Address(publicKeys, 2); // 2 of 2
+var publicKeys = privateKeys.map(mchaincore.PublicKey);
+var address = new mchaincore.Address(publicKeys, 2); // 2 of 2
 
 var utxo = {
   "txId" : "153068cdd81b73ec9d8dcce27f2c77ddda12dee3db424bff5cafdbe9f01c1756",
   "outputIndex" : 0,
   "address" : address.toString(),
-  "script" : new marbellachaincore.Script(address).toHex(),
+  "script" : new mchaincore.Script(address).toHex(),
   "satoshis" : 20000
 };
 
-var transaction = new marbellachaincore.Transaction()
+var transaction = new mchaincore.Transaction()
     .from(utxo, publicKeys, 2)
     .to('mtoKs9V381UAhUia3d7Vb9GNak8Qvmcsme', 20000)
     .sign(privateKeys);

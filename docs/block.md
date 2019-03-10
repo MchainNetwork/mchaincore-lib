@@ -1,5 +1,5 @@
-# MarbellaChain Block
-A Block instance represents the information of a block in the MarbellaChain network. Given a hexadecimal string representation of the serialization of a block with its transactions, you can instantiate a Block instance. Methods are provided to calculate and check the merkle root hash (if enough data is provided), but transactions won't necessarily be valid spends, and this class won't validate them. A binary representation as a `Buffer` instance is also valid input for a Block's constructor.
+# Mchain Block
+A Block instance represents the information of a block in the Mchain network. Given a hexadecimal string representation of the serialization of a block with its transactions, you can instantiate a Block instance. Methods are provided to calculate and check the merkle root hash (if enough data is provided), but transactions won't necessarily be valid spends, and this class won't validate them. A binary representation as a `Buffer` instance is also valid input for a Block's constructor.
 
 ```javascript
 // instantiate a new block instance

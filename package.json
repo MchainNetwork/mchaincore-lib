@@ -1,8 +1,8 @@
 {
-  "name": "marbellachaincore-lib",
+  "name": "mchaincore-lib",
   "version": "0.0.1",
-  "description": "A pure and powerful JavaScript MarbellaChain library.",
-  "author": "MarbellaChain <hello@marbellachain.org>",
+  "description": "A pure and powerful JavaScript Mchain library.",
+  "author": "Mchain <hello@mchain.network>",
   "main": "index.js",
   "scripts": {
     "lint": "gulp lint",
@@ -12,7 +12,7 @@
   },
   "contributors": [],
   "keywords": [
-    "marbellachain",
+    "mchain",
     "bitcoin",
     "transaction",
     "address",
@@ -30,7 +30,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/marbellachain/marbellachaincore-lib.git"
+    "url": "https://github.com/mchainnetwork/mchaincore-lib.git"
   },
   "browser": {
     "request": "browser-request"

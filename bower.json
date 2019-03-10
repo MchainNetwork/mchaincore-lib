@@ -1,12 +1,12 @@
 {
-  "name": "marbellachaincore-lib",
-  "main": "./marbellachaincore-lib.min.js",
+  "name": "mchaincore-lib",
+  "main": "./mchaincore-lib.min.js",
   "version": "0.0.1",
-  "homepage": "http://marbellachain.org",
+  "homepage": "http://mchain.network",
   "authors": [
-    "MarbellaChain <foundation@marbellachain.org>"
+    "Mchain <hello@mchain.network>"
   ],
-  "description": "A pure, powerful core for your marbellachain project.",
+  "description": "A pure, powerful core for your mchain project.",
   "moduleType": [
     "globals"
   ],
@@ -14,7 +14,9 @@
     "bitcoin",
     "bitcore",
     "btc",
-    "satoshi"
+    "satoshi",
+    "mchain",
+    "mcoin"
   ],
   "license": "MIT",
   "ignore": [

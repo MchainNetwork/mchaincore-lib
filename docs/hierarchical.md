@@ -7,8 +7,8 @@ An instance of a [PrivateKey](privatekey.md) that also contains information requ
 Sample usage:
 
 ```javascript
-var marbellachaincore = require('marbellachaincore');
-var HDPrivateKey = marbellachaincore.HDPrivateKey;
+var mchaincore = require('mchaincore');
+var HDPrivateKey = mchaincore.HDPrivateKey;
 
 var hdPrivateKey = new HDPrivateKey();
 var retrieved = new HDPrivateKey('xpriv...');

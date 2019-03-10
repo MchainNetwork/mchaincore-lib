@@ -1,13 +1,13 @@
 # Unit
-Unit is a utility for handling and converting MarbellaChain units. We strongly recommend to always use satoshis to represent amount inside your application and only convert them to other units in the front-end.
+Unit is a utility for handling and converting Mchain units. We strongly recommend to always use satoshis to represent amount inside your application and only convert them to other units in the front-end.
 
 To understand the need of using the `Unit` class when dealing with unit conversions, see this example:
 
 ```
 > 81.99 * 100000 // wrong
 8198999.999999999
-> var marbellachaincore = require('marbellachaincore');
-> var Unit = marbellachaincore.Unit;
+> var mchaincore = require('mchaincore');
+> var Unit = mchaincore.Unit;
 > Unit.fromMilis(81.99).toSatoshis() // correct
 8199000
 ```

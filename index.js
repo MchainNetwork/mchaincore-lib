@@ -6,14 +6,14 @@ var bitcore = module.exports;
 bitcore.version = 'v' + require('./package.json').version;
 bitcore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of marbellachaincore-lib found. ' +
-      'Please make sure to require marbellachaincore-lib and check that submodules do' +
-      ' not also include their own marbellachaincore-lib dependency.';
+    var message = 'More than one instance of mchaincore-lib found. ' +
+      'Please make sure to require mchaincore-lib and check that submodules do' +
+      ' not also include their own mchaincore-lib dependency.';
     console.log(message);
   }
 };
-bitcore.versionGuard(global._marbellachaincore);
-global._marbellachaincore = bitcore.version;
+bitcore.versionGuard(global._mchaincore);
+global._mchaincore = bitcore.version;
 
 // crypto
 bitcore.crypto = {};

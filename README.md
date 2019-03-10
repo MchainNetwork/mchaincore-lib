@@ -1,22 +1,22 @@
-MarbellaChaincore Library
+Mchaincore Library
 =======
 
-A pure and powerful JavaScript MarbellaChain library.
+A pure and powerful JavaScript Mchain library.
 
 
 ## Get Started
 
 ```
-npm install marbellachaincore-lib
+npm install mchaincore-lib
 ```
 
 ```
-bower install marbellachaincore-lib
+bower install mchaincore-lib
 ```
 
 ## Security
 
-We're using marbellachaincore-lib in production, but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
+We're using mchaincore-lib in production, but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
 
 
 
@@ -26,19 +26,19 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## Building the Browser Bundle
 
-To build a marbellachaincore-lib full bundle for the browser:
+To build a mchaincore-lib full bundle for the browser:
 
 ```sh
 gulp browser
 ```
 
-This will generate files named `marbellachaincore-lib.js` and `marbellachaincore-lib.min.js`.
+This will generate files named `mchaincore-lib.js` and `mchaincore-lib.min.js`.
 
 ## Development & Tests
 
 ```sh
-git clone https://github.com/marbellachain/marbellachaincore-lib
-cd marbellachaincore-lib
+git clone https://github.com/mchain/mchaincore-lib
+cd mchaincore-lib
 npm install
 ```
 

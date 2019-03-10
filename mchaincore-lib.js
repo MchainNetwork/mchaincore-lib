@@ -55164,7 +55164,7 @@ arguments[4][119][0].apply(exports,arguments)
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],360:[function(require,module,exports){
 module.exports={
-  "name": "marbellachaincore-lib",
+  "name": "mchaincore-lib",
   "version": "0.0.1",
   "description": "A pure and powerful JavaScript Bitcoin library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -55262,7 +55262,7 @@ module.exports={
   "license": "MIT"
 }
 
-},{}],"marbellachaincore-lib":[function(require,module,exports){
+},{}],"mchaincore-lib":[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 
@@ -55272,14 +55272,14 @@ var bitcore = module.exports;
 bitcore.version = 'v' + require('./package.json').version;
 bitcore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of marbellachaincore-lib found. ' +
-      'Please make sure to require marbellachaincore-lib and check that submodules do' +
-      ' not also include their own marbellachaincore-lib dependency.';
+    var message = 'More than one instance of mchaincore-lib found. ' +
+      'Please make sure to require mchaincore-lib and check that submodules do' +
+      ' not also include their own mchaincore-lib dependency.';
     throw new Error(message);
   }
 };
-bitcore.versionGuard(global._marbellachaincore);
-global._marbellachaincore = bitcore.version;
+bitcore.versionGuard(global._mchaincore);
+global._mchaincore = bitcore.version;
 
 // crypto
 bitcore.crypto = {};
